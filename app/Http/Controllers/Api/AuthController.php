@@ -44,7 +44,7 @@ class AuthController extends Controller
             ];
             if (auth()->attempt($loginCredentials)) {
                 $user = auth()->user();
-                return new LoginResource(['token' => $user->createToken($user->email)->accessToken, 'data' => $user]);
+                return new LoginResource(['token' => $user->createToken($user->email)->accessToken, 'user' => $user]);
             }
             throw new Error('Invalid Credentials. Please try again.', 412);
         } catch (Throwable $th) {

@@ -21,7 +21,6 @@ class AllUserResource extends JsonResource
             'email' => $this->email ?? '',
             'first_name' => $this->first_name ?? '',
             'last_name' => $this->last_name ?? '',
-            'password' => $this->show_password ?? '',
             'phone_no' => $this->phone_no ?? '',
             'image' => (!empty($this->image)) ? request()->getSchemeAndHttpHost() . '/storage/' . $this->image : '',
             'is_active' => $this->is_active ?? false,
