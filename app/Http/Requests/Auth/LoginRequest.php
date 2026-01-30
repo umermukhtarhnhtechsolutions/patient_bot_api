@@ -24,7 +24,6 @@ class LoginRequest extends FormRequest
         return [
             'email' => 'required|email|exists:users,email',
             'password' => 'required|min:3',
-            'role' => 'required',
         ];
     }
 
@@ -32,9 +31,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'Email' => 'Email',
-            'phone' => 'Phone Number',
             'password' => 'Password',
-            'role' => 'Role',
         ];
     }
 }

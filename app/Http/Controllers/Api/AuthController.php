@@ -40,7 +40,6 @@ class AuthController extends Controller
             $loginCredentials = [
                 'email' => $request->email,
                 'password' => $request->password,
-                'role' => $request->role,
             ];
             if (auth()->attempt($loginCredentials)) {
                 $user = auth()->user();
